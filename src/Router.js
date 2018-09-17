@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
-import TableWrapper from './component/tableWrapper';
+import TableWrapper from './component/TableWrapper';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import reducerSwitch from './reducers'
-import { createStore,  applyMiddleware } from 'redux';
 import {Provider} from 'react-redux';
-
+import Store from './Store'
 import "foundation-sites/dist/css/foundation.css";
-
-const store = createStore(reducerSwitch);
 
 class RouterIndex extends Component {
   render() {
@@ -20,7 +16,7 @@ class RouterIndex extends Component {
             </li>
           </ul>
           <hr />
-          <Provider store={store}>
+          <Provider store={Store}>
             <Route excat path="/" component={TableWrapper} />
           </Provider>
         </div>
