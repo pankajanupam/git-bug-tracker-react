@@ -1,15 +1,14 @@
-import { delay } from 'redux-saga'
-import { put, takeEvery, all } from 'redux-saga/effects'
+import { delay } from 'redux-saga';
+import { put, takeEvery, all, takeLatest } from 'redux-saga/effects';
+import { API_CALL_GET_BUG_LIST, BUG_LIST_RECEIVED } from "./constants";
 
-
-function* incrementAsync() {
-  yield delay(1000)
-  yield put({ type: 'INCREMENT' })
+function* listRecived() {
+  yield put({ bugList: [] })
 }
 
 
 function* watchIncrementAsync() {
-  yield takeEvery('INCREMENT_ASYNC', incrementAsync)
+  yield takeLatest(BUG_LIST_RECEIVED, listRecived)
 }
 
 
