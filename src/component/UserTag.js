@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
 const styleGuide = {
-    maxHeight: "40px",
+    maxHeight: "25px",
     borderRadius: '50%',
-    display: "block"
+    paddingRight : '5px'
 }
 
 const UserTag = (props) => {

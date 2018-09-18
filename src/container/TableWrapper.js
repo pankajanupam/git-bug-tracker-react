@@ -12,7 +12,7 @@ class TableWrapper extends Component {
                         <th width="150">Number/#</th>
                         <th width="150">Number of Comments</th>
                         <th width="150">Last updated time</th>
-                        <th width="100">Created By</th>
+                        <th width="200">Created By</th>
                     </tr>
                 </thead>
                 <tbody>
