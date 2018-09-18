@@ -17,7 +17,7 @@ class RouterIndex extends Component {
           </ul>
           <hr />
           <Provider store={Store}>
-            <Route excat path="/" component={TableWrapper} />
+            <Route path="/:page?/:pageid?" component={TableWrapper} />
           </Provider>
         </div>
       </Router>
