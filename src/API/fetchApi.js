@@ -1,12 +1,8 @@
+import { USER, REPOSITORIE } from '../config/github'
 
-import { BaseUrl } from './constantApi';
+const fetchApi = endPoint => {
 
-
-let user = "redux-saga";
-let repositorie = "redux-saga";
-
-const fetchApi = (endPoint) => {
-    return fetch(BaseUrl + endPoint.getUrl(user, repositorie), {
+    return fetch(endPoint.getUrl(USER, REPOSITORIE), {
         method: endPoint.method,
     }).then(response => response.json());
 }

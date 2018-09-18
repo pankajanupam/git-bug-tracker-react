@@ -7,7 +7,7 @@ class TableWrapper extends Component {
             <table className="grid-container">
                 <thead>
                     <tr>
-                        <th >Title</th>
+                        <th>Title</th>
                         <th width="150">Status</th>
                         <th width="150">Number/#</th>
                         <th width="150">Number of Comments</th>

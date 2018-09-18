@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { API_CALL_GET_BUG_LIST } from "../constants";
-
+import { API_CALL_GET_BUG_LIST } from '../constants/actions';
 import StatusTag from './StatusTag';
 import UserTag from './UserTag';
 

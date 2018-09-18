@@ -1,5 +1,5 @@
 import { put, call, all, takeLatest } from 'redux-saga/effects';
-import { API_CALL_GET_BUG_LIST, BUG_LIST_RECEIVED } from "./constants";
+import { API_CALL_GET_BUG_LIST, BUG_LIST_RECEIVED } from "./constants/actions";
 
 import fetchApi from './API/fetchApi';
 import { EndPoint } from './API/constantApi';

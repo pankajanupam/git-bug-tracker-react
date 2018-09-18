@@ -1,8 +1,8 @@
-export const BaseUrl = "https://api.github.com/";
+import { ApiBaseUrl } from '../config/url'
 
 export const EndPoint = {
     list: {
         method: "GET",
-        getUrl: (user, repositorie) => `repos/${user}/${repositorie}/issues`
+        getUrl: (user, repositorie) => `${ApiBaseUrl}repos/${user}/${repositorie}/issues`
     }
 }

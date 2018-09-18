@@ -1,4 +1,4 @@
-import { BUG_LIST_RECEIVED } from "./constants"
+import { BUG_LIST_RECEIVED } from './constants/actions';
 
 function reducerSwitch(state = {}, action) {
     switch (action.type) {

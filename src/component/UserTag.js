@@ -3,7 +3,7 @@ import React from 'react';
 const styleGuide = {
     maxHeight: "25px",
     borderRadius: '50%',
-    paddingRight : '5px'
+    paddingRight: '5px'
 }
 
 const UserTag = (props) => {
