@@ -1,4 +1,4 @@
-import { API_CALL_GET_BUG_LIST, BUG_LIST_RECEIVED } from "./constants"
+import { BUG_LIST_RECEIVED } from "./constants"
 
 function reducerSwitch(state = {}, action) {
     switch (action.type) {

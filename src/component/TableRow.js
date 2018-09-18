@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import { API_CALL_GET_BUG_LIST, BUG_LIST_RECEIVED } from "../constants";
+import React from 'react';
 import { connect } from 'react-redux';
+import { API_CALL_GET_BUG_LIST } from "../constants";
 
 import StatusTag from './StatusTag';
 import UserTag from './UserTag';
 
-class TableRow extends Component {
+class TableRow extends React.Component {
 
     constructor(props) {
         super(props);
@@ -13,9 +13,11 @@ class TableRow extends Component {
     }
 
     render() {
+        const { bugList } = this.props;
+
         return (
-            this.props.bugList && this.props.bugList.map((item, index) => (
-                <tr key={index}>
+            (bugList && bugList.map(item =>
+                <tr key={item.id}>
                     <td>{item.title}</td>
                     <td><StatusTag status={item.state} /></td>
                     <td>{item.number}</td>
@@ -23,7 +25,7 @@ class TableRow extends Component {
                     <td>{item.updated_at}</td>
                     <td><UserTag user={item.user} /></td>
                 </tr>
-            )) || (<tr><td className="text-center" colSpan="6"> <strong>Fetching Data ... </strong></td></tr>)
+            )) || <tr><td className="text-center" colSpan="6"> <strong>Fetching Data ... </strong></td></tr>
         )
     }
 }
