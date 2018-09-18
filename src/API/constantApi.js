@@ -1,7 +1,7 @@
-export const baseUrl = "https://api.github.com/";
+export const BaseUrl = "https://api.github.com/";
 
 export const EndPoint = {
-    list:{
+    list: {
         method: "GET",
         getUrl: (user, repositorie) => `repos/${user}/${repositorie}/issues`
     }

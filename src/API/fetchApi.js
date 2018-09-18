@@ -1,8 +1,14 @@
 
-export default fetchApi = (URL) => {
-    return fetch(URL, {
-        method: 'GET',
-    }).then(function (response) {
-        console.log(e);
-    });
+import { BaseUrl } from './constantApi';
+
+
+let user = "redux-saga";
+let repositorie = "redux-saga";
+
+const fetchApi = (endPoint) => {
+    return fetch(BaseUrl + endPoint.getUrl(user, repositorie), {
+        method: endPoint.method,
+    }).then(response => response.json());
 }
+
+export default fetchApi;

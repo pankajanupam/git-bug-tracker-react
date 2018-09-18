@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import TableWrapper from './component/TableWrapper';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import {Provider} from 'react-redux';
+import TableWrapper from './container/TableWrapper';
 import Store from './Store'
 import "foundation-sites/dist/css/foundation.css";
 

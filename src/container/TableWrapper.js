@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import TableRow from './TableRow';
+import TableRow from '../component/TableRow';
 
 class TableWrapper extends Component {
     render() {
         return (
-            <table>
+            <table className="grid-container">
                 <thead>
                     <tr>
                         <th >Title</th>
@@ -12,10 +12,12 @@ class TableWrapper extends Component {
                         <th width="150">Number/#</th>
                         <th width="150">Number of Comments</th>
                         <th width="150">Last updated time</th>
-                        <th width="150">Created By</th>
+                        <th width="100">Created By</th>
                     </tr>
                 </thead>
+                <tbody>
                     <TableRow />
+                </tbody>
             </table>
         )
     }

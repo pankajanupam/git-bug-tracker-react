@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { API_CALL_GET_BUG_LIST, BUG_LIST_RECEIVED } from "../constants";
 import { connect } from 'react-redux';
 
+import StatusTag from './StatusTag';
+import UserTag from './UserTag';
+
 class TableRow extends Component {
 
     constructor(props) {
@@ -10,20 +13,17 @@ class TableRow extends Component {
     }
 
     render() {
-        console.log(this.props.bugList);
         return (
-            <tbody>
-                {this.props.bugList && this.props.bugList.map((item, index) => (
-                    <tr key={index}>
-                        <td>{item.title}</td>
-                        <td>{item.state}</td>
-                        <td>{item.number}</td>
-                        <td>{item.comments}</td>
-                        <td>{item.updated_at}</td>
-                        <td>{item.user.login}</td>
-                    </tr>
-                ))}
-            </tbody>
+            this.props.bugList && this.props.bugList.map((item, index) => (
+                <tr key={index}>
+                    <td>{item.title}</td>
+                    <td><StatusTag status={item.state} /></td>
+                    <td>{item.number}</td>
+                    <td>{item.comments}</td>
+                    <td>{item.updated_at}</td>
+                    <td><UserTag user={item.user} /></td>
+                </tr>
+            )) || (<tr><td className="text-center" colSpan="6"> <strong>Fetching Data ... </strong></td></tr>)
         )
     }
 }
@@ -38,7 +38,7 @@ const mapDispatchToProps = dispatch => {
     return {
         getBugList: () =>
             dispatch({
-                type: BUG_LIST_RECEIVED
+                type: API_CALL_GET_BUG_LIST
             })
     }
 }
