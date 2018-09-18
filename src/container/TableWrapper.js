@@ -8,9 +8,9 @@ class TableWrapper extends React.Component {
             <table className="grid-container">
                 <thead>
                     <tr>
+                        <th width="100">#</th>
                         <th>Title</th>
                         <th width="150">Status</th>
-                        <th width="150">Number/#</th>
                         <th width="150">Number of Comments</th>
                         <th width="150">Last updated time</th>
                         <th width="200">Created By</th>
