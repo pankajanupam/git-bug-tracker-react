@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import TableRow from '../component/TableRow';
+import PaginationBar from '../component/PaginationBar';
 
-class TableWrapper extends Component {
+class TableWrapper extends React.Component {
     render() {
         return (
             <table className="grid-container">
@@ -18,6 +19,11 @@ class TableWrapper extends Component {
                 <tbody>
                     <TableRow />
                 </tbody>
+                <tfoot>
+                    <tr>
+                        <td colSpan="6"><PaginationBar /></td>
+                    </tr>
+                </tfoot>
             </table>
         )
     }

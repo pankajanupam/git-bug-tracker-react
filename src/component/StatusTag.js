@@ -2,9 +2,10 @@ import React from 'react';
 
 const baseStyle = {
     color: '#fff',
+    fontSize: '0.8em',
     borderRadius: '5px',
-    padding: '7px 10px',
-    textTransform: "capitalize"
+    padding: '5px 10px',
+    textTransform: "uppercase"
 }
 
 const styleGuide = {

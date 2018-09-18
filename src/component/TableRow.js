@@ -17,9 +17,9 @@ class TableRow extends React.Component {
         return (
             (bugList && bugList.map(item =>
                 <tr key={item.id}>
+                    <td>{item.number}</td>
                     <td>{item.title}</td>
                     <td><StatusTag status={item.state} /></td>
-                    <td>{item.number}</td>
                     <td>{item.comments}</td>
                     <td>{item.updated_at}</td>
                     <td><UserTag user={item.user} /></td>
